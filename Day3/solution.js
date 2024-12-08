@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-REGEX = /(?<=mul\()\d{1,3},\d{1,3}(?=\))/gm
+const REGEX = /(?<=mul\()\d{1,3},\d{1,3}(?=\))/gm
 
 const readData = (data)=>fs.readFileSync(data,'utf-8').match(REGEX).map(el=>el.split(','))
 
